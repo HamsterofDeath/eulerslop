@@ -1,0 +1,3 @@
+Problem 49: Prime Permutations
+
+1487, 4817, 8147 form an arithmetic sequence (difference 3330) where each is prime and all are 4-digit permutations. There is one other 4-digit increasing sequence with this property. Concatenate the three terms into a 12-digit number.

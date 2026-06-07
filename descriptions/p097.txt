@@ -1,0 +1,2 @@
+Problem 97: Large Non-Mersenne Prime
+The first known prime to exceed one million digits was discovered in 1999, a Mersenne prime of the form 2^6972593-1. In 2004 a massive non-Mersenne prime with 2,357,207 digits was found: 28433 × 2^7830457 + 1. Find the last ten digits of this prime number.

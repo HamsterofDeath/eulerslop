@@ -1,0 +1,2 @@
+Problem 72: Counting Fractions
+For d ≤ 8, there are 21 elements in the set of reduced proper fractions. How many elements would be contained in the set of reduced proper fractions for d ≤ 1,000,000?

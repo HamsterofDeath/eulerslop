@@ -1,0 +1,2 @@
+Problem 74: Digit Factorial Chains
+145 = 1!+4!+5! = 1+24+120 = 145. 169 produces the longest chain linking back to itself: 169→363601→1454→169. Three loops exist: 169→363601→1454→169, 871→45361→871, 872→45362→872. Every starting number eventually gets stuck in a loop. Starting with 69 produces a chain of five non-repeating terms, but the longest non-repeating chain with a starting number below one million is sixty terms. How many chains with a starting number below one million contain exactly sixty non-repeating terms?

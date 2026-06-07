@@ -1,0 +1,3 @@
+Problem 50: Consecutive Prime Sum
+
+Prime 41 = 2+3+5+7+11+13 (six consecutive primes). This is the longest sum of consecutive primes below 100 that adds to a prime. The longest below 1000 has 21 terms and equals 953. Which prime below one million can be written as the sum of the most consecutive primes?

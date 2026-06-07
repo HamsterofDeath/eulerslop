@@ -1,0 +1,3 @@
+Problem 42: Coded Triangle Numbers
+
+The nth term of triangle numbers is t_n = ½n(n+1). First ten: 1, 3, 6, 10, 15, 21, 28, 36, 45, 55. By converting each letter in a word to a number (A=1, B=2, etc.) we form a word value. If the word value is a triangle number then the word is a triangle word. Using words.txt (a 16K file with nearly two-thousand common English words), how many are triangle words?

@@ -1,0 +1,2 @@
+Problem 85: Counting Rectangles
+A 3x2 rectangular grid contains eighteen rectangles. No grid contains exactly two million rectangles. Find the area of the grid with the nearest solution.

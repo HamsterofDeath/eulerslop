@@ -1,0 +1,2 @@
+Problem 89: Roman Numerals
+For a number written in Roman numerals to be considered valid there are basic rules. There is always a "best" way of writing a particular number. The 11K text file roman.txt contains one thousand numbers written in valid, but not necessarily minimal, Roman numerals. Find the number of characters saved by writing each of these in their minimal form.

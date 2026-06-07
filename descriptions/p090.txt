@@ -1,0 +1,2 @@
+Problem 90: Cube Digit Pairs
+Each of the six faces on a cube has a different digit (0 to 9) written on it; the same is done to a second cube. By placing the two cubes side-by-side we can form 2-digit numbers. By carefully choosing the digits on both cubes it is possible to display all of the square numbers below one-hundred: 01, 04, 09, 16, 25, 36, 49, 64, and 81. For this problem we allow 6 or 9 to be turned upside-down. How many distinct arrangements of the two cubes allow for all of the square numbers to be displayed?

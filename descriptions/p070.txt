@@ -1,0 +1,2 @@
+Problem 70: Totient Permutation
+Euler's totient function phi(n) determines the number of numbers less than n relatively prime to n. phi(87109)=79180, and 87109 is a permutation of 79180. Find the value of n, 1 < n < 10^7, for which phi(n) is a permutation of n and the ratio n/phi(n) produces a minimum.

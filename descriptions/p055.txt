@@ -1,0 +1,3 @@
+Problem 55: Lychrel Numbers
+
+Take 47, reverse and add: 47+74=121, which is palindrome. Not all produce palindromes quickly: 349+943=1292, 1292+2921=4213, 4213+3124=7337 (3 iterations). Numbers that never form a palindrome through reverse-and-add are Lychrel numbers. For numbers below 10000, either they become palindrome in <50 iterations or no one has found one. 10677 requires 53 iterations. There are palindromic Lychrel numbers, like 4994. How many Lychrel numbers are there below ten-thousand?

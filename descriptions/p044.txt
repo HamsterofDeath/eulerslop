@@ -1,0 +1,3 @@
+Problem 44: Pentagon Numbers
+
+Pentagonal numbers: P_n = n(3n-1)/2. First ten: 1, 5, 12, 22, 35, 51, 70, 92, 117, 145. P_4+P_7=22+70=92=P_8, but 70-22=48 is not pentagonal. Find the pair for which sum and difference are pentagonal and D = |P_k - P_j| is minimised. What is the value of D?

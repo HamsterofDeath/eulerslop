@@ -1,0 +1,2 @@
+Problem 57: Square Root Convergents
+The square root of two can be expressed as an infinite continued fraction: sqrt(2) = 1 + 1/(2 + 1/(2 + ...)). By expanding for the first four iterations: 3/2=1.5, 7/5=1.4, 17/12=1.41666..., 41/29=1.41379... The eighth expansion 1393/985 is the first where the numerator has more digits than denominator. In the first one-thousand expansions, how many fractions contain a numerator with more digits than the denominator?

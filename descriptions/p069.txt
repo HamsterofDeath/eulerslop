@@ -1,0 +1,2 @@
+Problem 69: Totient Maximum
+Euler's totient function phi(n) is defined as the number of positive integers not exceeding n which are relatively prime to n. For example, phi(9)=6. It can be seen that n=6 produces a maximum n/phi(n) for n ≤ 10. Find the value of n ≤ 1,000,000 for which n/phi(n) is a maximum.

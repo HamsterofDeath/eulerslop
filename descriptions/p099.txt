@@ -1,0 +1,2 @@
+Problem 99: Largest Exponential
+Comparing numbers like 2^11 and 3^7 is easy, but confirming 632382^518061 > 519432^525806 is much harder (both have over three million digits). Using base_exp.txt (a 22K file with 1000 lines of base/exponent pairs), determine which line number has the greatest numerical value.

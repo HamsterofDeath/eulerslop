@@ -1,0 +1,2 @@
+Problem 98: Anagramic Squares
+By replacing each letter in CARE with 1,2,9,6 we form a square number 1296 = 36². Using the same substitutions, the anagram RACE also forms a square number: 9216 = 96². CARE and RACE are a square anagram word pair. Using words.txt (a 16K text file with nearly two-thousand common English words), find all the square anagram word pairs. What is the largest square number formed by any member of such a pair?

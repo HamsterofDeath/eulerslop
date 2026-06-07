@@ -1,0 +1,3 @@
+Problem 54: Poker Hands
+
+A poker hand consists of five cards. In poker.txt, 1000 random hands are dealt to two players. Each line has ten cards: first five for Player 1, last five for Player 2. Determine how many hands Player 1 wins.

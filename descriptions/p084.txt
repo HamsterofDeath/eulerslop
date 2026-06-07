@@ -1,0 +1,2 @@
+Problem 84: Monopoly Odds
+In Monopoly, a player starts on GO and rolls two 6-sided dice. Landing on G2J, CC, and CH changes the distribution. CC has 2/16 movement cards, CH has 10/16. Three consecutive doubles sends you to jail. With two 6-sided dice, the three most popular squares are JAIL (10), E3 (24), GO (00) giving modal string 102400. If instead two 4-sided dice are used, find the six-digit modal string.

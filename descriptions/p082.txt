@@ -1,0 +1,2 @@
+Problem 82: Path Sum: Three Ways
+Find the minimal path sum from the left column to the right column in matrix.txt (an 80x80 matrix), only moving up, down, and right.

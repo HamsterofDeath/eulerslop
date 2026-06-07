@@ -1,0 +1,2 @@
+Problem 95: Amicable Chains
+The proper divisors of a number are all the divisors excluding the number itself. The sum of proper divisors of 220 is 284 and sum of proper divisors of 284 is 220, forming an amicable pair. Longer chains exist: 12496→14288→15472→14536→14264(→12496). Since this chain returns to its starting point, it is an amicable chain. Find the smallest member of the longest amicable chain with no element exceeding one million.

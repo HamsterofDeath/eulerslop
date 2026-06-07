@@ -1,0 +1,3 @@
+Problem 51: Prime Digit Replacements
+
+By replacing the 1st digit of *3, six of nine values (13,23,43,53,73,83) are prime. Replacing 3rd and 4th digits of 56**3 with the same digit, seven of ten numbers are prime: 56003,56113,56333,56443,56663,56773,56993. 56003 is the first member. Find the smallest prime which, by replacing part of the number (not necessarily adjacent digits) with the same digit, is part of an eight prime value family.

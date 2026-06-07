@@ -1,0 +1,2 @@
+Problem 67: Maximum Path Sum II
+By starting at the top of a triangle and moving to adjacent numbers on the row below, the maximum total from top to bottom is found. Find the maximum total from top to bottom in triangle.txt (a 15K text file containing a triangle with one-hundred rows). NOTE: This is a much more difficult version of Problem 18. There are 2^99 routes - checking one trillion per second would take over twenty billion years. There is an efficient algorithm to solve it.

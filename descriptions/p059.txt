@@ -1,0 +1,2 @@
+Problem 59: XOR Decryption
+Each character on a computer is assigned a unique code and the preferred standard is ASCII. A modern encryption method is to XOR each byte with a given value from a secret key. Using XOR again with the same key restores plain text. Your task: the encryption key consists of three lower case characters. Using 0059_cipher.txt (a file containing encrypted ASCII codes), and the knowledge that the plain text must contain common English words, decrypt the message and find the sum of the ASCII values in the original text.

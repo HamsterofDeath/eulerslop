@@ -1,0 +1,2 @@
+Problem 66: Diophantine Equation
+Consider quadratic Diophantine equations: x^2 - Dy^2 = 1. When D=13, minimal solution is 649^2 - 13×180^2 = 1. For D ≤ 7, the largest x is when D=5. Find the value of D ≤ 1000 in minimal solutions of x for which the largest value of x is obtained.

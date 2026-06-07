@@ -1,0 +1,2 @@
+Problem 81: Path Sum: Two Ways
+In a 5x5 matrix, the minimal path sum from top left to bottom right, by only moving right and down, is 2427. Find the minimal path sum in matrix.txt (an 80x80 matrix), moving only right and down.

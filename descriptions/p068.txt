@@ -1,0 +1,2 @@
+Problem 68: Magic 5-gon Ring
+Using numbers 1 to 10 in a magic 5-gon ring, each line adds to the same total. Working clockwise starting from the group with the numerically lowest external node, each solution can be described uniquely. By concatenating groups, 9-digit strings (for 3-gon) and 16- or 17-digit strings (for 5-gon) are formed. What is the maximum 16-digit string for a magic 5-gon ring?

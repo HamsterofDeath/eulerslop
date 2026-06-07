@@ -1,0 +1,2 @@
+Problem 61: Cyclical Figurate Numbers
+Triangle, square, pentagonal, hexagonal, heptagonal, and octagonal numbers are all figurate numbers. The ordered set of three 4-digit numbers: 8128 (triangle P(3,127)), 2882 (pentagonal P(5,44)), 8281 (square P(4,91)) is cyclic - the last two digits of each number is the first two digits of the next. Find the sum of the only ordered set of six cyclic 4-digit numbers for which each polygonal type (triangle, square, pentagonal, hexagonal, heptagonal, octagonal) is represented by a different number.
