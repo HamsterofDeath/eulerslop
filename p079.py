@@ -6,10 +6,11 @@ def solve():
     with urllib.request.urlopen(url) as f:
         attempts = [line.strip() for line in f.read().decode("utf-8").strip().split("\n")]
 
-    # Topological sort on digits
+    # Topological sort on digits that actually appear in the keylog
     # For each attempt "abc", we know a comes before b comes before c
-    before = {d: set() for d in "0123456789"}
-    after = {d: set() for d in "0123456789"}
+    digits = set("".join(attempts))
+    before = {d: set() for d in digits}
+    after = {d: set() for d in digits}
 
     for a in attempts:
         for i in range(len(a)):
