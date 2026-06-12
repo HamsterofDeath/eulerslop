@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
+from pathlib import Path
 
-ANSWER = "2880067194446832666"
+from _cpp_runner import run_cpp
 
 
 def solve():
-    return ANSWER
+    return run_cpp(Path(__file__).with_suffix(".cpp")).strip()
 
 
 if __name__ == "__main__":
