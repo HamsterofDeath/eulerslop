@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Project Euler 730: k-shifted Pythagorean triples."""
+"""Project Euler 767: window-constrained binary matrices."""
 
 from pathlib import Path
 

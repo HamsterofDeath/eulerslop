@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Project Euler 730: k-shifted Pythagorean triples."""
+"""Project Euler 766: sliding block puzzle."""
 
 from pathlib import Path
 

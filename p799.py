@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Project Euler 730: k-shifted Pythagorean triples."""
+"""Project Euler 799: pentagonal number sums."""
 
 from pathlib import Path
 
