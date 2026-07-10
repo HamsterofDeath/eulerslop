@@ -1,2 +1,6 @@
 .env
 __pycache__/
+
+# MP4 archives live outside Git in OneDrive:
+# C:\Users\dhaup\OneDrive\BrainLiftGames\video-backup\eulerslop
+*.mp4
