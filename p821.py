@@ -1,9 +1,6 @@
 #!/usr/bin/env python3
 """Project Euler 821: 123-separable sets."""
 
-from math import gcd
-
-
 LIMIT = 10**16
 
 
@@ -19,24 +16,21 @@ def smooth_2_3(limit: int) -> list[int]:
     return sorted(values)
 
 
-def component_value(limit: int) -> int:
-    # A component consists of m*2^a*3^b for fixed gcd(m, 6) = 1.
-    # Choosing one (a mod 2, b mod 2) class is 123-separable and covers all
-    # component points except the opposite parity class; the best class is optimal.
-    totals = [[0, 0], [0, 0]]
-    power2 = 1
-    a = 0
-    while power2 <= limit:
-        value = power2
-        b = 0
-        while value <= limit:
-            weight = 1 + (2 * value <= limit) + (3 * value <= limit)
-            totals[a & 1][b & 1] += weight
-            value *= 3
-            b += 1
-        power2 *= 2
-        a += 1
-    return max(max(row) for row in totals)
+def exceptional_smooth(limit: int) -> set[int]:
+    """Smooth points that cannot be covered in an optimal component packing."""
+    values = {value for value in (6, 24, 54) if value <= limit}
+
+    value = 384
+    while value <= limit:
+        values.add(value)
+        value *= 8
+
+    value = 243
+    while value <= limit:
+        values.add(value)
+        value *= 27
+
+    return values
 
 
 def coprime_to_6_count(limit: int) -> int:
@@ -47,14 +41,22 @@ def coprime_to_6_count(limit: int) -> int:
 
 def f_value(limit: int) -> int:
     thresholds = smooth_2_3(limit)
+    exceptions = exceptional_smooth(limit)
     total = 0
+    component_value = 0
+
     for index, low in enumerate(thresholds):
+        # The exact maximum for one 2^a*3^b component is the number of
+        # smooth points seen so far, minus the explicit exceptional points.
+        if low not in exceptions:
+            component_value += 1
+
         high = thresholds[index + 1] - 1 if index + 1 < len(thresholds) else limit
         left = limit // (high + 1) + 1 if high < limit else 1
         right = limit // low
         if left <= right:
             bases = coprime_to_6_count(right) - coprime_to_6_count(left - 1)
-            total += bases * component_value(low)
+            total += bases * component_value
     return total
 
 

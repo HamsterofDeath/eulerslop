@@ -118,12 +118,15 @@ static uint64_t floor_s_mod(uint64_t limit) {
     vector<uint64_t> ones(classes.size(), 1);
     dfs_powerful(0, 1, ones);
 
-    uint64_t triangular = (__uint128_t)(limit % WORK_MOD) * ((limit + 1) % WORK_MOD) %
-                          WORK_MOD;
-    if (triangular & 1)
-        triangular = (triangular + WORK_MOD) / 2;
+    // Keep the triangular number modulo 2M.  Dividing a product already
+    // reduced modulo 2M would retain only a residue modulo M.
+    uint64_t triangular;
+    if ((limit & 1) == 0)
+        triangular = (__uint128_t)((limit / 2) % WORK_MOD) *
+                     ((limit + 1) % WORK_MOD) % WORK_MOD;
     else
-        triangular /= 2;
+        triangular = (__uint128_t)(limit % WORK_MOD) *
+                     (((limit + 1) / 2) % WORK_MOD) % WORK_MOD;
     uint64_t raw = ((__uint128_t)(odd_count % WORK_MOD) * triangular + WORK_MOD -
                     z_sum_mod) %
                    WORK_MOD;

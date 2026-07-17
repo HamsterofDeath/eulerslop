@@ -1,34 +1,18 @@
 #!/usr/bin/env python3
-"""Project Euler 842: intersection counts over Hamiltonian cycles."""
+"""Project Euler 842: intersection counts over Hamiltonian cycles.
 
-from math import comb, cos, factorial, pi, sin
+Each crossing of two diagonals corresponds to one cyclically ordered vertex
+quadruple.  If m diagonals concur, the same geometric point therefore occurs
+C(m, 2) times among all quadruples.  Recover those multiplicities, then count
+Hamiltonian cycles containing at least two edges from each size-m matching.
+"""
+
+from math import comb, cos, factorial, isqrt, pi, sin
 
 
 MOD = 1_000_000_007
 INV2 = (MOD + 1) // 2
 FACT = [factorial(i) % MOD for i in range(70)]
-
-
-def crossing(a: int, b: int, c: int, d: int) -> bool:
-    if len({a, b, c, d}) < 4:
-        return False
-    if a > b:
-        a, b = b, a
-    return (a < c < b) != (a < d < b)
-
-
-def intersection(p1, p2, p3, p4) -> tuple[float, float]:
-    x1, y1 = p1
-    x2, y2 = p2
-    x3, y3 = p3
-    x4, y4 = p4
-    den = (x1 - x2) * (y3 - y4) - (y1 - y2) * (x3 - x4)
-    a = x1 * y2 - y1 * x2
-    b = x3 * y4 - y3 * x4
-    return (
-        round((a * (x3 - x4) - (x1 - x2) * b) / den, 10),
-        round((a * (y3 - y4) - (y1 - y2) * b) / den, 10),
-    )
 
 
 def cycles_containing_at_least_two(n: int, group_size: int) -> int:
@@ -40,25 +24,53 @@ def cycles_containing_at_least_two(n: int, group_size: int) -> int:
     return total % MOD
 
 
-def t_value(n: int) -> int:
+def intersection_multiplicities(n: int) -> dict[int, int]:
+    """Return {number of concurrent diagonals: number of such points}."""
     points = [(cos(2 * pi * i / n), sin(2 * pi * i / n)) for i in range(n)]
-    chords = [
-        (i, j)
-        for i in range(n)
-        for j in range(i + 1, n)
-        if j != i + 1 and not (i == 0 and j == n - 1)
-    ]
+    # This tolerance joins round-off variants of a true concurrence.  The
+    # triangular-number check below detects a split or accidental merge.
+    scale = 10**9
+    pair_counts: dict[tuple[int, int], int] = {}
 
-    groups: dict[tuple[float, float], set[tuple[int, int]]] = {}
-    for index, first in enumerate(chords):
-        for second in chords[index + 1 :]:
-            if crossing(first[0], first[1], second[0], second[1]):
-                key = intersection(
-                    points[first[0]], points[first[1]], points[second[0]], points[second[1]]
-                )
-                groups.setdefault(key, set()).update((first, second))
+    # For a < b < c < d, diagonals (a,c) and (b,d) cross exactly once.
+    for a in range(n - 3):
+        x1, y1 = points[a]
+        for b in range(a + 1, n - 2):
+            x3, y3 = points[b]
+            offset_x = x3 - x1
+            offset_y = y3 - y1
+            for c in range(b + 1, n - 1):
+                x2, y2 = points[c]
+                first_x = x2 - x1
+                first_y = y2 - y1
+                for d in range(c + 1, n):
+                    x4, y4 = points[d]
+                    second_x = x4 - x3
+                    second_y = y4 - y3
+                    denominator = first_x * second_y - first_y * second_x
+                    parameter = (
+                        offset_x * second_y - offset_y * second_x
+                    ) / denominator
+                    x = x1 + parameter * first_x
+                    y = y1 + parameter * first_y
+                    key = (round(x * scale), round(y * scale))
+                    pair_counts[key] = pair_counts.get(key, 0) + 1
 
-    return sum(cycles_containing_at_least_two(n, len(group)) for group in groups.values()) % MOD
+    distribution: dict[int, int] = {}
+    for pairs in pair_counts.values():
+        root = isqrt(1 + 8 * pairs)
+        if root * root != 1 + 8 * pairs:
+            raise ArithmeticError("intersection clustering lost a concurrence")
+        multiplicity = (1 + root) // 2
+        distribution[multiplicity] = distribution.get(multiplicity, 0) + 1
+    return distribution
+
+
+def t_value(n: int) -> int:
+    return sum(
+        point_count * cycles_containing_at_least_two(n, multiplicity)
+        for multiplicity, point_count in intersection_multiplicities(n).items()
+    ) % MOD
 
 
 def solve() -> int:

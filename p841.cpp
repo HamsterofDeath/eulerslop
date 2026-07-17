@@ -1,6 +1,7 @@
 // Project Euler 841: along a ray, the q crossed star edges alternate shaded
-// and unshaded.  Integrating sec^2 over the p-fold symmetric sector gives the
-// alternating tangent sum below.
+// and unshaded.  Integrating sec^2 over the p-fold symmetric sector gives an
+// alternating sum of tangent increments.  Pair adjacent increments
+// analytically so that millions of nearly equal terms are never subtracted.
 #include <cmath>
 #include <cstdio>
 #include <iomanip>
@@ -11,18 +12,31 @@ using namespace std;
 
 static long double area(long long p, long long q) {
     const long double pi = acosl(-1.0L);
+    const long double x = pi / (long double)p;
+    const long double twice_sin_squared = 2.0L * sinl(x) * sinl(x);
     long double sum = 0.0L;
-    long double prev = 0.0L;
-    int sign = ((q - 1) & 1LL) ? -1 : 1;
     long double c = 0.0L;  // Kahan compensation.
-    for (long long t = 0; t < q; ++t) {
-        long double cur = tanl((long double)(t + 1) * pi / (long double)p);
-        long double term = (long double)sign * (cur - prev) - c;
+
+    // For even q, pair Delta_2-Delta_1, Delta_4-Delta_3, ...
+    // For odd q, retain Delta_1 and pair Delta_3-Delta_2, ...
+    long long first_center;
+    if (q & 1LL) {
+        sum = tanl(x);
+        first_center = 2;
+    } else {
+        first_center = 1;
+    }
+
+    for (long long center_index = first_center; center_index < q;
+         center_index += 2) {
+        long double center = (long double)center_index * x;
+        long double paired =
+            twice_sin_squared * tanl(center) /
+            (cosl(center - x) * cosl(center + x));
+        long double term = paired - c;
         long double next = sum + term;
         c = (next - sum) - term;
         sum = next;
-        sign = -sign;
-        prev = cur;
     }
     return (long double)p * sum;
 }
@@ -42,6 +56,6 @@ int main() {
 
     long double total = 0.0L;
     for (int n = 3; n <= 34; ++n) total += area(fib[n + 1], fib[n - 1]);
-    cout << fixed << setprecision(10) << (double)total << "\n";
+    cout << fixed << setprecision(10) << total << "\n";
     return 0;
 }
