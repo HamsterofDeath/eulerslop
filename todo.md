@@ -1,6 +1,6 @@
 # Project Euler — Unsolved Problems
 
-Total solved: 859 / 859 (1-859 range)
+Total solved: 860 / 860 (1-860 range)
 Missing: 0 problems
 
 ---
