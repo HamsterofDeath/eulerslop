@@ -1,8 +1,25 @@
 # Project Euler — Unsolved Problems
 
-Total solved: 894 / 894 (1-894 range)
-Missing: 0 problems
+Published range: 1-997
+Total solved: 980 / 997
+Missing: 17 problems
 
 ---
 
-All problems in the range are solved.
+- [ ] [981 — The Quaternion Group II](descriptions/p981.txt)
+- [ ] [982 — The Third Dice](descriptions/p982.txt)
+- [ ] [983 — Consonant Circle Crossing](descriptions/p983.txt)
+- [ ] [984 — Knights and Horses](descriptions/p984.txt)
+- [ ] [985 — Telescoping Triangles](descriptions/p985.txt)
+- [ ] [986 — Another Infinite Game](descriptions/p986.txt)
+- [ ] [987 — Straight Eight](descriptions/p987.txt)
+- [ ] [988 — Non-attacking Frogs](descriptions/p988.txt)
+- [ ] [989 — Fibonacci Sum](descriptions/p989.txt)
+- [ ] [990 — Addition Equations](descriptions/p990.txt)
+- [ ] [991 — Fruit Salad](descriptions/p991.txt)
+- [ ] [992 — Another Frog Jumping](descriptions/p992.txt)
+- [ ] [993 — Banana Beaver](descriptions/p993.txt)
+- [ ] [994 — Counting Triangles](descriptions/p994.txt)
+- [ ] [995 — A Particular Pair of Polynomials](descriptions/p995.txt)
+- [ ] [996 — Overtakes](descriptions/p996.txt)
+- [ ] [997 — Dice Box](descriptions/p997.txt)
