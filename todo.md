@@ -1,9 +1,9 @@
 # Project Euler — Unsolved Problems
 
 Published range: 1-997
-Total solved: 996 / 997
-Missing: 1 problem
+Total solved: 997 / 997
+Missing: 0 problems
 
 ---
 
-- [ ] [997 — Dice Box](descriptions/p997.txt)
+No published problems are currently unsolved.
