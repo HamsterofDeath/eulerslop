@@ -1,12 +1,11 @@
 # Project Euler — Unsolved Problems
 
 Published range: 1-997
-Total solved: 983 / 997
-Missing: 14 problems
+Total solved: 984 / 997
+Missing: 13 problems
 
 ---
 
-- [ ] [984 — Knights and Horses](descriptions/p984.txt)
 - [ ] [985 — Telescoping Triangles](descriptions/p985.txt)
 - [ ] [986 — Another Infinite Game](descriptions/p986.txt)
 - [ ] [987 — Straight Eight](descriptions/p987.txt)
