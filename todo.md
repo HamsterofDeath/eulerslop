@@ -1,12 +1,11 @@
 # Project Euler — Unsolved Problems
 
 Published range: 1-997
-Total solved: 990 / 997
-Missing: 7 problems
+Total solved: 991 / 997
+Missing: 6 problems
 
 ---
 
-- [ ] [991 — Fruit Salad](descriptions/p991.txt)
 - [ ] [992 — Another Frog Jumping](descriptions/p992.txt)
 - [ ] [993 — Banana Beaver](descriptions/p993.txt)
 - [ ] [994 — Counting Triangles](descriptions/p994.txt)
