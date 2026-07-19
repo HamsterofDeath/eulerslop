@@ -1,12 +1,11 @@
 # Project Euler — Unsolved Problems
 
 Published range: 1-997
-Total solved: 981 / 997
-Missing: 16 problems
+Total solved: 982 / 997
+Missing: 15 problems
 
 ---
 
-- [ ] [982 — The Third Dice](descriptions/p982.txt)
 - [ ] [983 — Consonant Circle Crossing](descriptions/p983.txt)
 - [ ] [984 — Knights and Horses](descriptions/p984.txt)
 - [ ] [985 — Telescoping Triangles](descriptions/p985.txt)
