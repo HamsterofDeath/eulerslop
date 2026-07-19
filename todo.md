@@ -1,12 +1,11 @@
 # Project Euler — Unsolved Problems
 
 Published range: 1-997
-Total solved: 986 / 997
-Missing: 11 problems
+Total solved: 987 / 997
+Missing: 10 problems
 
 ---
 
-- [ ] [987 — Straight Eight](descriptions/p987.txt)
 - [ ] [988 — Non-attacking Frogs](descriptions/p988.txt)
 - [ ] [989 — Fibonacci Sum](descriptions/p989.txt)
 - [ ] [990 — Addition Equations](descriptions/p990.txt)
