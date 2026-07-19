@@ -1,12 +1,11 @@
 # Project Euler — Unsolved Problems
 
 Published range: 1-997
-Total solved: 982 / 997
-Missing: 15 problems
+Total solved: 983 / 997
+Missing: 14 problems
 
 ---
 
-- [ ] [983 — Consonant Circle Crossing](descriptions/p983.txt)
 - [ ] [984 — Knights and Horses](descriptions/p984.txt)
 - [ ] [985 — Telescoping Triangles](descriptions/p985.txt)
 - [ ] [986 — Another Infinite Game](descriptions/p986.txt)
