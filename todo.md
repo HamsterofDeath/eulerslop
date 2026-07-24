@@ -1,8 +1,9 @@
 # Project Euler — Unsolved Problems
 
-Total solved: 894 / 894 (1-894 range)
+Published range: 1-997
+Total solved: 997 / 997
 Missing: 0 problems
 
 ---
 
-All problems in the range are solved.
+No published problems are currently unsolved.
