@@ -1,9 +1,16 @@
 # Project Euler — Unsolved Problems
 
-Published range: 1-997
-Total solved: 997 / 997
-Missing: 0 problems
+Published range: 1-1007
+Total solved: 999 / 1007
+Missing: 8 problems
 
 ---
 
-No published problems are currently unsolved.
+- 1000 — Problem 1000
+- 1001 — Connections I
+- 1002 — Connections II
+- 1003 — Lonely Singles
+- 1004 — Balanced Integer
+- 1005 — Median Prime List
+- 1006 — Fibonacci Subwords
+- 1007 — Alternating Difference
