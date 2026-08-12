@@ -55,7 +55,7 @@ def run_one(n):
 def main():
     known = load_table(KNOWN)
     ours = load_table(OURS)
-    problems = sorted(int(p.stem[1:]) for p in ROOT.glob("p[0-9][0-9][0-9].py"))
+    problems = sorted(int(p.stem[1:]) for p in ROOT.glob("p[0-9][0-9][0-9]*.py"))
 
     args = sys.argv[1:]
     if "--all" in args:
